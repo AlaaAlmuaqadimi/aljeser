@@ -352,7 +352,8 @@
       aspect-ratio: 4/3;
       background-image:
         radial-gradient(circle at top, rgba(209,178,0,0.22), transparent 55%),
-        url("https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=1200");
+     url("https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&cs=tinysrgb&w=1200");
+
       background-size: cover;
       background-position: center;
     }
