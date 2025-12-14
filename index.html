@@ -5,7 +5,7 @@
   <title>شركة جسر العبور لاستيراد وسائل النقل</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="شركة جسر العبور لاستيراد وسائل النقل - جنزور الوسط بالقرب من كوبري الجعافرة" />
-
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon">
   <!-- خط -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -384,14 +384,15 @@
               <iframe
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.999999!2d13.000000!3d32.850000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDUxJzAwLjAiTiAxM8KwMDAnMDAuMCJF!5e0!3m2!1sar!2sly!4v0000000000000">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3353.2906594940473!2d13.012932!3d32.8110628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a8e8f2b2b57573%3A0x54a11cd0f3b40144!2z2KzZhtiy2YjYsQ!5e0!3m2!1sar!2sly!4v1765703876721!5m2!1sar!2sly">
               </iframe>
+              
             </div>
           </div>
         </div>
 
         <div class="contact-form-card">
-          <form onsubmit="event.preventDefault(); alert('تم إرسال طلبك بنجاح (نموذج تجريبي)');">
+          <form onsubmit="event.preventDefault(); showToast();">
             <div class="form-row">
               <div class="form-group">
                 <label for="name">الاسم الكامل</label>
@@ -423,6 +424,7 @@
               <button class="btn-primary" type="submit">إرسال الطلب</button>
               <span>سنقوم بالتواصل معك خلال أقرب وقت ممكن لتأكيد البيانات ومناقشة الخيارات المتاحة.</span>
             </div>
+            
           </form>
         </div>
       </div>
@@ -443,6 +445,16 @@
       <span>🟢</span>
     </a>
   </div>
+
+<div id="toastCenter" class="toast-center">
+  <div class="toast-box">
+    <div class="toast-icon">✅</div>
+    <div class="toast-text">
+      <b>تم إرسال الطلب بنجاح</b>
+      <span>سنقوم بالتواصل معك في أقرب وقت ممكن</span>
+    </div>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 
