@@ -19,12 +19,35 @@
         }
       });
     }); 
- 
-function showToast(){
-  const toast = document.getElementById("toastCenter");
-  toast.classList.add("show");
+  
+  function showToast() {
+    const toast = document.getElementById("toastCenter");
+    toast.classList.add("show");           // لو عندك CSS يعتمد show
+    toast.style.display = "flex";          // احتياط لو كان مخفي
+    setTimeout(() => {
+      toast.classList.remove("show");
+      toast.style.display = "none";
+    }, 3000);
+  }
 
-  setTimeout(()=>{
-    toast.classList.remove("show");
-  }, 3000);
-} 
+  async function sendForm() {
+    const form = document.getElementById("contactForm");
+
+    try {
+      const res = await fetch("sendmail.php", {   // اسم ملف الـPHP
+        method: "POST",
+        body: new FormData(form)
+      });
+
+      const data = await res.json();
+
+      if (data.ok) {
+        showToast();      // ✅ التوست يشتغل بعد نجاح الإرسال
+        form.reset();
+      } else {
+        alert(data.error || "صار خطأ أثناء الإرسال");
+      }
+    } catch (e) {
+      alert("تعذر الاتصال بالسيرفر، حاول مرة أخرى.");
+    }
+  } 
