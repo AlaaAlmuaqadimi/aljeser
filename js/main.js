@@ -34,7 +34,7 @@
     const form = document.getElementById("contactForm");
 
     try {
-      const res = await fetch("sendmail.php", {   // اسم ملف الـPHP
+      const res = await fetch("/send_mail.php", {   // اسم ملف الـPHP
         method: "POST",
         body: new FormData(form)
       });
