@@ -505,6 +505,67 @@
     .about-contact-line a:hover { color: var(--primary); }
 
     .contact-divider { margin: 0.7rem 0; border-bottom: 1px dashed var(--border-soft); }
+/* ABOUT — Responsive */
+@media (max-width: 992px) {
+  .about-grid{
+    grid-template-columns: 1fr;   /* عمود واحد */
+    gap: 1.4rem;
+  }
+
+  .about-side{
+    order: 2;                      /* اختياري: خليه بعد النص */
+    padding: 1.1rem 1.1rem;
+    border-radius: 22px;
+  }
+
+  .about-highlights{
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* كروت 2 في الصف */
+  }
+}
+
+@media (max-width: 600px) {
+  .about-highlights{
+    grid-template-columns: 1fr;    /* كرت لكل صف */
+  }
+
+  .about-card{
+    font-size: 0.9rem;             /* أكبر شوية للقراءة */
+    padding: 1rem;
+  }
+
+  /* الـ tagline على الموبايل خليه كبطاقة بدل pill */
+  .about-tagline{
+    border-radius: 16px;           /* بدل 999px */
+    padding: 0.9rem 1rem;
+    line-height: 1.7;
+    background: rgba(255,255,255,0.75);
+  }
+
+  /* رتب سطر التواصل على الموبايل */
+  .about-contact-line{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.35rem;
+  }
+
+  .about-contact-line a{
+    word-break: break-word;        /* لو رابط/رقم طويل */
+  }
+
+  .about-location{
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
+
+/* تحسينات عامة لتفادي overflow */
+.about-side,
+.about-card,
+.about-tagline{
+  min-width: 0;
+}
+
 
     /* SHOWROOM */
     #showroom { background: var(--bg-section-alt); }
